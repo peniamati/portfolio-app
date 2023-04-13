@@ -1,20 +1,29 @@
 import smtplib, ssl
-import os
+from email.message import EmailMessage
+import settings
+
+username = settings.EMAIL
+password = settings.PASSWORD
 
 
-def send_email(message):
-    host = "smtp.gmail.com"
-    port = 465
+def send_email(message, subject):
+    host = "smtp-mail.outlook.com"
+    port = 587
 
-    username = "accsumadvanced@gmail.com"
-    password = os.getenv("PASSWORD")
-
-    receiver = "accsumadvanced@gmail.com"
-    context = ssl.create_default_context()
+    receiver = "pena_matias@hotmail.com"
 
     message = message
-    with smtplib.SMTP_SSL(host, port, context=context) as server:
+
+    email = EmailMessage()
+    email["From"] = username
+    email["To"] = username
+    email["Subject"] = subject
+    email.set_content(message)
+
+    with smtplib.SMTP(host, port) as server:
+        server.starttls()
         server.login(username, password)
-        server.sendmail(username, receiver, message)
+        server.sendmail(username, receiver, email.as_string())
+        server.quit()
 
 
