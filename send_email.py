@@ -1,9 +1,10 @@
 import smtplib, ssl
 from email.message import EmailMessage
 import settings
+import streamlit as st
 
-username = settings.EMAIL
-password = settings.PASSWORD
+username = st.secrets["db_username"]
+password = st.secrets["db_password"]
 
 
 def send_email(message, subject):
