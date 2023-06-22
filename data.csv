@@ -5,4 +5,4 @@ PDF Templates;A script that generates PDF templates of multiple pages given some
 PDF Invoices;A script that reads invoice records from Excel files and automatically generates PDF invoices.;https://github.com/peniamati/pdf-invoices.git;4.png
 Chatgpt GUI;A chatbot that knows about a specific topic and answers questions regarding that topic.;https://github.com/peniamati/chatgpt-gui;9.png
 Visualizing Weather Forecast;A data web app that visualizes the weather forecast for the next five days of any city.;https://github.com/peniamati/weather-forecast-data-app;16.png
-Student Management System;A desktop PyQt6 GUI app for managing university student data with an SQL database backend.;https://github.com/peniamati/student-weather-forecast-app;17.png
+Student Management System;A desktop PyQt6 GUI app for managing university student data with an SQL database backend.;https://github.com/peniamati/student-management-mysql/;17.png
